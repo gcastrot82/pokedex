@@ -18,5 +18,5 @@ Instalar dependencias: Entrar al directorio del repositorio: pip install -r requ
 Ejecutar el proyecto: flask run -h 0.0.0.0 -p 5000
 
 ## Paso 5:
-Comrpobar si el servicio esta ejecutandose: http://localhost/ping
+Comrpobar si el servicio esta ejecutandose: http://localhost:5000/ping
 
