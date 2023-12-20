@@ -4,6 +4,13 @@ from flask import jsonify,request
 
 
 def get_pokemon_data_by_name_or_id(pokemon):
+    """
+    Funcíon: get_pokemon_data_by_name_or_id(pokemon)
+    Este middelware, comunica con la API de pokeapi, y se le envía el id o nombre del pokemon a consultar.
+    La función valida:
+    - Si el pokemon exite.
+    - Si el servicio de pokeapi esta o no disponible.
+    """
     try:
         url = f'https://pokeapi.co/api/v2/pokemon/{pokemon.lower()}'
         response = requests.get(url)
@@ -28,6 +35,16 @@ def get_pokemon_data_by_name_or_id(pokemon):
 
 
 def get_pokemon_with_filtered_data(pokemon):
+
+    """
+    Funcíon: get_pokemon_with_filtered_data(pokemon)
+    Este middelware, comunica con la API de pokeapi, y se le envía el id o nombre del pokemon a consultar.
+    La función valida:
+    - Si el pokemon exite.
+    - Si el servicio de pokeapi esta o no disponible.
+    - Retorna los siguientes atributos: abilities, idPokeDex, sprites, types
+    """
+        
     try:
         url = f'https://pokeapi.co/api/v2/pokemon/{pokemon.lower()}'
         response = requests.get(url)
@@ -55,7 +72,6 @@ def get_pokemon_with_filtered_data(pokemon):
         respuesta = jsonify(mensaje)
         respuesta.status_code = 500
         return respuesta
-
 
 
 class PokedexGeneralView(Resource):
