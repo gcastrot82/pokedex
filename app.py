@@ -5,7 +5,7 @@ from flask_restful import Api
 from datetime import timedelta
 # from dotenv import load_dotenv
 
-from view.pokedex_view import HealthCkeckView,PokedexView
+from view.pokedex_view import HealthCkeckView,PokedexGeneralView, PokedexFilteredView
 
 # load_dotenv()
 
@@ -19,7 +19,8 @@ cors = CORS(app)
 api = Api(app)
 
 # Endpoints
-api.add_resource(PokedexView,'/pokedex')
+api.add_resource(PokedexGeneralView,'/pokedex')
+api.add_resource(PokedexFilteredView,'/pokedex/filter')
 api.add_resource(HealthCkeckView,'/pokedex/ping')
 
 jwt = JWTManager(app)
