@@ -25,9 +25,9 @@ Activar el entorno virtual: .\venv\Scripts\activate
 ## Paso 4:
 Instalar dependencias: Entrar al directorio del repositorio: pip install -r requirements
 
-## Paso 4:
+## Paso 5:
 Ejecutar el proyecto: flask run -h 0.0.0.0 -p 5000
 
-## Paso 5:
+## Paso 6:
 Comrpobar si el servicio esta ejecutandose: http://localhost:5000/ping
 
