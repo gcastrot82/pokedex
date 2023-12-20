@@ -1,7 +1,18 @@
 # pokedex
-Pasos para ejecutar el proyecto
 
+Pasos para ejecutar el proyecto en Docker:
+## Paso 1:
+Descargar el repositorio e ingresar al directorio del proyecto
 
+## Paso 2:
+Compilar la imagen: docker build -t img-pokedex .
+
+## Paso 3:
+Ejecutar el contenedor: docker run -d -p 5000:5000 img-pokedex
+
+## -----------------------------------------------
+
+Pasos para ejecutar el proyecto en Local:
 ## Paso 1:
 Descargar el repositorio: git clone <URL del repositorio>
 
