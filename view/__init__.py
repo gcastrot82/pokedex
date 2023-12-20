@@ -1,0 +1,1 @@
+from .pokedex_view import *
